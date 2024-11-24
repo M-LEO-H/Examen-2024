@@ -1,35 +1,48 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
+    max-width: 90%;
 }
 p {
     size: 2.4rem;
 }
 
-/* Content Wrapper */
-.content {
-    margin: 20px auto;
-    display: flex;
-    max-width: 90%;
-    height: auto;
-    gap: 30px;
-    background-color: bisque;
-    border-radius: 8px;
-}
-.text-content {
-    max-width: 60;
-    flex: 1;
-}
-
-
-.img-content img {
-    display: flex;
-    max-width: 80%;
+.grid-container-intro {
+    display: grid;
+    grid-template-columns: repeat(5, 1xfr); /* Three columns */
     margin: auto;
-
-    object-fit: cover;
+}
+.grid-intro-item{
+    grid-column: 4/6;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.grid-intro-image{
+    grid-column: 1/4;
+    max-width: 100%;
     height: auto;
-    overflow: hidden;
+    object-fit: cover;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@media*/
+/* Media Query to move the special-item to the next row */
+@media (max-width: 768px) {
+    .grid-container-intro {
+        grid-template-columns: 1fr 1fr; /* Change to 2 columns on smaller screens */
+    }
+
+    /* Make the special item span the full row */
+    .grid-intro-item{
+        grid-column: 1 / -1; /* This will make the item take up the entire row */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container-intro {
+        grid-template-columns: 1fr; /* Change to 1 column on mobile screens */
+    }
+
+    /* No need to specify grid-column as it's already a single column layout */
 }
