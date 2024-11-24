@@ -1,4 +1,45 @@
 <!DOCTYPE html>
+<style>
+    .expand-toggle {
+    display: none; /* Skjul avkrysningsboksen */
+}
+
+.expand-label {
+    display: block;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.expand-label:hover {
+    background-color: #0056b3;
+}
+
+.expand-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.expand-toggle:checked + .expand-label + .expand-content {
+    display: block; /* Vis innholdet når checkbox er valgt */
+}
+
+.expand-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+</style>
 <head>
     <title>Matte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +102,9 @@
 <p> ASUHDIAUDSHOAISUDGADGH</p>
 <ul>
     <li>
-        <h3>Opptakspoeng</h3>
+        <input type="checkbox" id="opptakspoeng" class="expand-toggle">
+    <label for="opptakspoeng" class="expand-label">Opptakspoeng</label>
+    <div class="expand-content">
         <ul>
         <!-- Liste innhold -->
          <h4>Krav for opptak :</h4>
@@ -73,9 +116,12 @@
          <p>Opptakspoeng med forrige inntak : Alle kvalifiserte søkere fikk tilbudt studieplass</p>
     
         </ul>
+        </div>
     </li>
     <li>
-        <h3>Læringsutbytte</h3>
+        <input type="checkbox" id="Læringsutbytte" class="expand-toggle">
+    <label for="Læringsutbytte" class="expand-label">Læringsutbytte</label>
+    <div class="expand-content">
         <ul>
             <!-- Liste innhold -->
              <h4>Generell læringsutbytte</h4>
@@ -108,108 +154,200 @@
                
              </p> 
         </ul>
+        </div>
     </li>
     <li>
-        <h3>Studieforløp</h3>
+        <input type="checkbox" id="Studieforløp" class="expand-toggle">
+    <label for="Studieforløp" class="expand-label">Studieforløp</label>
+    <div class="expand-content">
         <ul>
-            <!-- Liste innhold-->
-            <h4>Første semester</h4>
+            <h4>1.år</h4>
+            <!-- Liste innhold første semester-->
+            <input type="checkbox" id="semester1" class="expand-toggle">
+        <label for="semester1" class="expand-label">Første semester</label>
+        <div class="expand-content">
+            
              <ul>
-                <li>Diskret matematikk</li>
-                <p>DAPE1300</p>
-                <li>Matte 213132</li>
-                <p>DAPE1400</p>
-                <li>Teknologi og samfunn for programmerere</li>
-                <p>DATA1100</p>
-                <li>Innføring i modeller og beregninger</li>
-                <p>MAMO1100</p>
+                <li>Diskret matematikk
+                    <p>DAPE1300</p>
+                </li>
+                   
+                <li>Matte 213132
+                    <p>DAPE1400</p>
+                </li>
+                    
+                <li>Teknologi og samfunn for programmerere
+                    <p>DATA1100</p>
+                </li>
+                   
+                <li>Innføring i modeller og beregninger
+                    <p>MAMO1100</p>
+                </li>
+                    
              </ul>
-             <h4>Andre semester</h4>
+             </div>
+             <input type="checkbox" id="semester2" class="expand-toggle">
+        <label for="semester2" class="expand-label">Andre semester</label>
+        <div class="expand-content">
+             
              <ul>
-                <li>MAtematikk 1000</li>
-                <p>DAFE1000</p>
-                <li>Fysikk og kjemi</li>
-                <p>DAPE2101</p>
-                <li>Databaser</li>
-                <p>DATA1500</p>
+                <li>MAtematikk 1000
+                    <p>DAFE1000</p>
+                </li>
+                <li>Fysikk og kjemi
+                    <p>DAPE2101</p>
+                </li>
+                
+                <li>Databaser
+                    <p>DATA1500</p>
+                </li>
+                
              </ul>
-             <h4>Tredje semester</h4>
+             </div>
+
+             <h4>2.år</h4>
+
+             <input type="checkbox" id="semester3" class="expand-toggle">
+             <label for="semester3" class="expand-label">Tredje semester</label>
+             <div class="expand-content">
+             
              <ul>
-                <li>Matematikk 2000 med statistikk</li>
-                <p>DAPE 20000</p>
-                <li>Moderne fysikk</li>
-                <p>MAMO2100</p>
-                <li>Spesialiserings fag</li>
-                <h5>Statistiske og datadrevne metoder</h5>
-                <p>Algoritmer og datastrukturer</p>
-                <h5>Vitenskapelige beregninger</h5>
-                <p>Algoritmer og datastrukturer</p>
-                <h5>Matematikk og fysikk</h5>
-                <p> Lineær algebra og introduksjon til gruppeteori</p>
+                <li>Matematikk 2000 med statistikk
+                    <p>DAPE 20000</p>
+                </li>
+               
+                <li>Moderne fysikk
+                    <p>MAMO2100</p>
+                </li>
+             
+                <li>Spesialiserings fag
+                    <ul>
+                        <li>
+                            <h5>Statistiske og datadrevne metoder</h5>
+                            <p>Algoritmer og datastrukturer</p>
+                        </li>
+                        <li>
+                            <h5>Vitenskapelige beregninger</h5>
+                            <p>Algoritmer og datastrukturer</p>
+                        </li>
+                        <li>
+                            <h5>Matematikk og fysikk</h5>
+                            <p> Lineær algebra og introduksjon til gruppeteori</p>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+                
              </ul>
-             <h4>Fjerde semester</h4>
+             </div>
+             <input type="checkbox" id="semester4" class="expand-toggle">
+             <label for="semester4" class="expand-label">Fjerde semester</label>
+             <div class="expand-content">
+             
              <ul>
                 <li>Matematikk 4000</li>
                 <p>DAVE3705</p>
                 <li>Spesialiserings fag</li>
-                <h5>Statistiske og datadrevne metoder</h5>
-                    <p>Termodynamikk og statistisk fysikk</p>
-                    <p>Symmetrier og algebraiske strukturer</p>
-                <h5>Matematikk og fysikk</h5>
-                    <p>Termodynamikk og statistisk fysikk</p>
-                    <p>Symmetrier og algebraiske strukturer</p>
-                    <p>MAMO2500</p>
-                <h5>Vitenskapelieg beregninger</h5>
-                    <p>Resuseffektive programmer</p>
-                    <p>Avansert mdellering og beregninger</p>
+                <ul>
+                    <li> 
+                        <h5>Statistiske og datadrevne metoder</h5>
+                        <p>Termodynamikk og statistisk fysikk</p>
+                        <p>Symmetrier og algebraiske strukturer</p>
+                    </li>
+                    <li>
+                        <h5>Matematikk og fysikk</h5>
+                        <p>Termodynamikk og statistisk fysikk</p>
+                        <p>Symmetrier og algebraiske strukturer</p>
+                        <p>MAMO2500</p>
+                    </li>
+                    <li>
+                        <h5>Vitenskapelieg beregninger</h5>
+                        <p>Resuseffektive programmer</p>
+                        <p>Avansert mdellering og beregninger</p>
+                    </li>
+                </ul>
+               
+                
+                
              </ul>
-             <h4>Femte semester</h4>
+             </div>
+             <h4>3.pr<h4>
+             <input type="checkbox" id="semester5" class="expand-toggle">
+             <label for="semester5" class="expand-label">Femte semester</label>
+             <div class="expand-content">
+            
              <ul>
                 <li>Matematikk 3000</li>
                 <p>DAVE3700</p>
                 <li>Spesialiserings fag</li>
-                <h5>Statistiske og datadrevne metoder</h5>
+                <ul>
+                    <li>
+                        <h5>Statistiske og datadrevne metoder</h5>
                     <p>Introduksjon til Kunstig Intelligens</p>
                     <p>Introduksjon til IT-forskning</p>
                     <p>Anvendt kunstig intelligens og data science prosjekt</p>
                     <p>Datasikkerhet</p>
                     <p>Simulering og visualisering</p>
-                <h5>Matematikk og fysikk</h5>
+                    </li>
+                    <li>
+                        <h5>Matematikk og fysikk</h5>
                     <p>Termodynamikk og statistisk fysikk</p>
                     <p>Symmetrier og algebraiske strukturer</p>
                     <p>MAMO2500</p>
-                <h5>Vitenskapelieg beregninger</h5>
-                    <p>Simulering og visualisering</p>
-                    <p>Introduksjon til IT-forskning</p>
-                    <p>Datasikkerhet</p>
-                    <p>Lineær algebra og introduksjon til gruppeteori</p>
-                    <p>Reell analyse</p>
+                    </li>
+                    <li>
+                        <h5>Vitenskapelieg beregninger</h5>
+                        <p>Simulering og visualisering</p>
+                        <p>Introduksjon til IT-forskning</p>
+                        <p>Datasikkerhet</p>
+                        <p>Lineær algebra og introduksjon til gruppeteori</p>
+                        <p>Reell analyse</p>
+                    </li>
+                </ul>
+                
              </ul>
-             <h4>Sjette semester</h4>
+             </div>
+             <input type="checkbox" id="semester6" class="expand-toggle">
+             <label for="semester6" class="expand-label">Sjette semester</label>
+             <div class="expand-content">
+             
+             
              <ul>
                 <li>Bacheloroppgave</li>
                 <p>DAVE3900</p>
                 <li>Spesialiserings fag</li>
-                <h5>Statistiske og datadrevne metoder</h5>
-                    <p>Testing av programvare</p>
-                    <p>Datanettverk og skytjenester</p>
-                    <p>Ressurseffektive programmer</p>
-                <h5>Matematikk og fysikk</h5>
+                <ul>
+                    <li>
+                        <h5>Statistiske og datadrevne metoder</h5>
+                        <p>Testing av programvare</p>
+                        <p>Datanettverk og skytjenester</p>
+                        <p>Ressurseffektive programmer</p>
+                    </li>
+                    <li>
+                        <h5>Matematikk og fysikk</h5>
                     <p>Testing av programvare</p>
                     <p>Datanettverk og skytjenester</p>
                     <p>Ressurseffektive programmer</p>
                     <p>Avansert modellering og beregninger</p>
-                <h5>Vitenskapelieg beregninger</h5>
+                    </li>
+                    <li>
+                        <h5>Vitenskapelieg beregninger</h5>
                     <p>Visualisering</p>
                     <p>Testing av programvare</p>
                     <p>Datanettverk og skytjenester</p>
                     <p>Symmetrier og algebraiske strukturer</p>
+                    </li>
+                </ul>   
              </ul>
              
         </ul>
+        </div>
     </li>
-    <li>
-        <h3>Undervisnings informasjon</h3>
+
+        <input type="checkbox" id="UndervisningsInfo" class="expand-toggle">
+    <label for="UndervisningsInfo" class="expand-label">Undervisnings informasjon</label>
+    <div class="expand-content">
         <ul>
             <!-- Liste innhold-->
              <p>Undervisningsmetoder :</p>
@@ -225,18 +363,22 @@
                 <li>arbeidslivsrelevant bacheloroppgave</li>
              </ul>
         </ul>
+        </div>
     </li>
     <li>
-        <h3>Studiekostnad</h3>
-        
+   
+        <input type="checkbox" id="StudieKostnad" class="expand-toggle">
+    <label for="StudieKostnad" class="expand-label">Studiekostnad</label>
+    <div class="expand-content">
             <!-- Liste innhold-->
              <p>Du betaler en semesteravgift hvert semester (student.oslomet.no).</p>
              <p>Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no). Det er mulig å søke om unntak for betaling av denne studieavgiften.</p>
-        
+        </div>
     </li>
     <li>
-        <h3>Jobb etter utdanning</h3>
-
+        <input type="checkbox" id="jobbEUtdanning" class="expand-toggle">
+    <label for="jobbEUtdanning" class="expand-label">Jobb etter utdanning</label>
+    <div class="expand-content">
             <!-- Liste innhold-->
              <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder. 
 
@@ -245,9 +387,12 @@
                 Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping. 
                 
                 Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet. </p>
-
+        </div>
     </li>
     <li>
+        <input type="checkbox" id="Utvekslingsmuligheter" class="expand-toggle">
+    <label for="Utvekslingsmuligheter" class="expand-label">Utvekslingsmuligheter</label>
+    <div class="expand-content">
         <h3>Utvekslingsmuligheter</h3>
         <ul>
             <!-- Liste innhold-->
@@ -256,13 +401,18 @@
              <li>Land 2</li>
              <li>Land 3</li>
         </ul>
+        </div>
     </li>
     <li>
+        <input type="checkbox" id="videreUtdanning" class="expand-toggle">
+    <label for="videreUtdanning" class="expand-label">Videre utdanning ved Oslomet</label>
+    <div class="expand-content">
         <h3>Videre utdanning ved Oslomet</h3>
         <ul>
             <!-- Liste innhold-->
              <li>Anvendt data- og informajonsteknologi (ACIT)</li>
         </ul>
+        </div>
     </li>
     
     
