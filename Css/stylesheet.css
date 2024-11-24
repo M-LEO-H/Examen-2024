@@ -151,3 +151,17 @@ p {
     padding: 30px;
     margin-top: 5%;
 }
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for images */
+    gap: 20px; /* Spacing between items */
+    padding: 20px;
+    background-color: #f8f4eb; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+}
+.image-grid-item{
+    width: 100%;
+    height: 100%;
+}
+
+
