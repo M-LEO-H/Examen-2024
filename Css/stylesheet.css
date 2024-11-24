@@ -13,16 +13,18 @@ p {
     display: grid;
     grid-template-columns: repeat(5, 1xfr); /* Three columns */
     margin: auto;
+    padding-bottom: 5%;
 }
 .grid-intro-item{
     grid-column: 4/6;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: #ee3737;
+    text-align: left;
+    padding: 20px;
 }
 .grid-intro-image{
     grid-column: 1/4;
     max-width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
