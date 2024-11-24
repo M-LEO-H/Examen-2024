@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <style>
+    /* Koden for expand basert og inspirert av https://www.geeksforgeeks.org/html-label-tag/ og https://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lists_collapsible */
+
     .expand-toggle {
-    display: none; /* Skjul avkrysningsboksen */
+    display: none; /* checkboks */
 }
 
 .expand-label {
@@ -37,6 +39,33 @@
 .expand-content ul {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1 ); /* 4 kolonner i grid */
+    gap: 20px; /* velger mellomrom mellom element */
+    padding: 20px; /* avstand mellom kant av div */
+    background-color: #f8f4eb; /* bakgrunnsfargen til div */
+    border-radius: 10px; /* Runde kanter */
+}
+
+.grid-text {
+    text-align: left; /* Plasser tekst til venstre */
+}
+
+.grid-text p {
+    margin: 5px 0; /* Linjeavstand */
+    font-family: Arial, sans-serif;
+    color: #333; /* Tekst farge */
+}
+
+.grid-text strong {
+    color: #000; /* farge */
+}
+.liste-innhold {
+    background-color: #ffffff;
+    padding: 30px;
 }
 
 </style>
@@ -103,8 +132,9 @@
 
 <div class = "list-content">
 <h2>Informasjon</h2>
-<p> ASUHDIAUDSHOAISUDGADGH</p>
+<p> Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
 <ul>
+    <!--Kode for en dropdown meny ved hjelp av html og css. Bruker en checkboks for å avgjør om innhold skal bli vist eller ikke. Dersom bruker klikker på en label, som vil aktiveres check boksen. Dette vil gjøre at CSS ikke lengre vil skjule innholdet. Dette vil da se ut som en dropdown meny. Denne koden er basert på kode fra https://developer.mozilla.org/en-US/docs/Web/CSS/:checked og https://www.w3schools.com/css/css_dropdowns.asp -->
     <li>
         <input type="checkbox" id="opptakspoeng" class="expand-toggle">
     <label for="opptakspoeng" class="expand-label">Opptakspoeng</label>
@@ -161,6 +191,9 @@
         </div>
     </li>
     <li>
+
+      
+
         <input type="checkbox" id="Studieforløp" class="expand-toggle">
     <label for="Studieforløp" class="expand-label">Studieforløp</label>
     <div class="expand-content">
@@ -190,6 +223,8 @@
                     
              </ul>
              </div>
+
+             
              <input type="checkbox" id="semester2" class="expand-toggle">
         <label for="semester2" class="expand-label">Andre semester</label>
         <div class="expand-content">
