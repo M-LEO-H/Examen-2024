@@ -39,6 +39,30 @@
     margin-left: 20px;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3); /* Fire kolonner */
+    gap: 20px; /* Mellomrom mellom elementer */
+    padding: 20px; /* Innvendig marg */
+    background-color: #f8f4eb; /* Lys bakgrunnsfarge */
+    border-radius: 10px; /* Runde kanter */
+}
+
+.grid-text {
+    text-align: left; /* Juster tekst til venstre */
+}
+
+.grid-text p {
+    margin: 5px 0; /* Mellomrom mellom linjer */
+    font-family: Arial, sans-serif;
+    color: #333; /* Mørk grå tekst */
+}
+
+.grid-text strong {
+    font-size: 18px; /* Større skrift for fremhevet tekst */
+    color: #000; /* Svart for kontrast */
+}
+
 </style>
 <head>
     <title>Matte</title>
@@ -92,7 +116,7 @@
         <p>August</p>
     </div>
     <div class = "grid-text">
-        <p>Undervisningsspråk</p>
+        <p>Undervisningsspråk : </p>
         <p>Norsk</p>
         <p>Engelsk</p>
     </div>
@@ -132,7 +156,7 @@
              <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.
                 Første året velger du hvilken av disse spesialiseringene du vil ta.
     
-                <h4>Spesialiseringene</h4>
+                <h4>Studiets spesialiseringer</h4>
                 <ul>
                     <li>
                         Statistiske og datadrevne metoder
@@ -273,7 +297,7 @@
                 
              </ul>
              </div>
-             <h4>3.pr<h4>
+             <h4>3.år<h4>
              <input type="checkbox" id="semester5" class="expand-toggle">
              <label for="semester5" class="expand-label">Femte semester</label>
              <div class="expand-content">
