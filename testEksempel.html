@@ -1,0 +1,59 @@
+    <style>
+        .expand-section {
+            margin: 10px 0;
+        }
+
+        .expand-toggle {
+            display: none; /* Hide the checkbox */
+        }
+
+        .expand-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .expand-label:hover {
+            background-color: #0056b3;
+        }
+
+        .expand-content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        .expand-toggle:checked + .expand-label + .expand-content {
+            display: block; /* Show the content when the checkbox is checked */
+        }
+    </style>
+</head>
+<body>
+    <h1>Expand Button Example</h1>
+
+    <div class="expand-section">
+        <input type="checkbox" id="expand1" class="expand-toggle">
+        <label for="expand1" class="expand-label">Expand Section 1</label>
+        <div class="expand-content">
+            <p>This is the expanded content for Section 1. You can include any text, images, or other elements here.</p>
+        </div>
+    </div>
+
+    <div class="expand-section">
+        <input type="checkbox" id="expand2" class="expand-toggle">
+        <label for="expand2" class="expand-label">Expand Section 2</label>
+        <div class="expand-content">
+            <p>This is the expanded content for Section 2. You can include any text, images, or other elements here.</p>
+        </div>
+    </div>
+</body>
+</html>
