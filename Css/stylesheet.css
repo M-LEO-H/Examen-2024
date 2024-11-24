@@ -10,6 +10,11 @@ p {
     size: 2.4rem;
 }
 
+.default-image{
+    width: 90%;
+    height: auto;
+}
+
 .grid-container-intro {
     display: grid;
     grid-template-columns: repeat(5, 1xfr); /* Three columns */
@@ -48,4 +53,36 @@ p {
     }
 
     /* No need to specify grid-column as it's already a single column layout */
+}
+
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1 ); /* Fire kolonner */
+    gap: 20px; /* Mellomrom mellom elementer */
+    padding: 20px; /* Innvendig marg */
+    background-color: #f8f4eb; /* Lys bakgrunnsfarge */
+    border-radius: 10px; /* Runde kanter */
+}
+
+.grid-text {
+    text-align: left; /* Juster tekst til venstre */
+}
+
+.grid-text p {
+    margin: 5px 0; /* Mellomrom mellom linjer */
+    font-family: Arial, sans-serif;
+    color: #333; /* Mørk grå tekst */
+}
+
+.grid-text strong {
+    font-size: 18px; /* Større skrift for fremhevet tekst */
+    color: #000; /* Svart for kontrast */
+}
+.liste-innhold {
+    background-color: #ffffff;
+    padding: 30px;
 }
