@@ -114,6 +114,7 @@ footer{
 
 
 /* Koden for expand basert og inspirert av https://www.geeksforgeeks.org/html-label-tag/ og https://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lists_collapsible */
+
 .expand-toggle {
     display: none; /* checkboks */
 }
@@ -196,16 +197,11 @@ footer{
 /*Fikser bilde for main content på activity page*/
 .image-grid {
     display: grid;
-<<<<<<< Updated upstream
-    grid-template-columns: repeat(2, 1fr); /* Two columns for images */
-    gap: 1rem; /* Spacing between items */
-=======
     grid-template-columns: repeat(2, 1fr); /* To kolonner */
     gap: 20px; /* Mellomrom */
     padding: 20px;
     background-color: #f8f4eb; /* Lys bakgrunn */
     border-radius: 10px; /* Runder hjørner */
->>>>>>> Stashed changes
 }
 .image-grid-item{
     width: 100%;
