@@ -120,6 +120,47 @@ p {
 
 
 
+/* Koden for expand basert og inspirert av https://www.geeksforgeeks.org/html-label-tag/ og https://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lists_collapsible */
+
+.expand-toggle {
+    display: none; /* checkboks */
+}
+
+.expand-label {
+    display: block;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.expand-label:hover {
+    background-color: #0056b3;
+}
+
+.expand-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.expand-toggle:checked + .expand-label + .expand-content {
+    display: block; /* Vis innholdet når checkbox er valgt */
+}
+
+.expand-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
 
 
 .grid {
@@ -163,5 +204,3 @@ p {
     width: 100%;
     height: 100%;
 }
-
-

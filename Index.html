@@ -1,80 +1,9 @@
 <!DOCTYPE html>
-<style>
-    /* Koden for expand basert og inspirert av https://www.geeksforgeeks.org/html-label-tag/ og https://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lists_collapsible */
-
-    .expand-toggle {
-    display: none; /* checkboks */
-}
-
-.expand-label {
-    display: block;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.expand-label:hover {
-    background-color: #0056b3;
-}
-
-.expand-content {
-    display: none;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-left: 4px solid #007BFF;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
-.expand-toggle:checked + .expand-label + .expand-content {
-    display: block; /* Vis innholdet når checkbox er valgt */
-}
-
-.expand-content ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3,1 ); /* 4 kolonner i grid */
-    gap: 20px; /* velger mellomrom mellom element */
-    padding: 20px; /* avstand mellom kant av div */
-    background-color: #f8f4eb; /* bakgrunnsfargen til div */
-    border-radius: 10px; /* Runde kanter */
-}
-
-.grid-text {
-    text-align: left; /* Plasser tekst til venstre */
-}
-
-.grid-text p {
-    margin: 5px 0; /* Linjeavstand */
-    font-family: Arial, sans-serif;
-    color: #333; /* Tekst farge */
-}
-
-.grid-text strong {
-    color: #000; /* farge */
-}
-.liste-innhold {
-    background-color: #ffffff;
-    padding: 30px;
-}
-
-</style>
-
 <html>
     <head>
         <title>Matte</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Css/stylesheet.css">
+        <link rel="stylesheet" href="/CSS/stylesheet.css">
     </head>
     
     <!--Shared Navigation Menu -->
