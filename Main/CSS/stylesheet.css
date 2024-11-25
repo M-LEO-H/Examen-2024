@@ -12,7 +12,7 @@ p {
 /* Navbar container */
 .navbar {
     display: flex;
-    background-color: #f8f4eb; /* Padding for top/bottom and sides */
+    background-color: #f8f4eb;
     margin-bottom: 5%;
 }
 
@@ -20,10 +20,9 @@ p {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2.5rem; /* Space between links */
+    gap: 2.5rem;
 }
 
-/* Individual link styles */
 .nav-links a {
     color: black;
     text-decoration: none;
@@ -34,10 +33,14 @@ p {
     text-decoration: underline;
 }
 
+/* The @media querie checks for a spesific codition of the device. If the device matches the condition
+   the changes nested within the query will be applied. The @media query is used multiple times within
+   this css file. The code used are inspired from the Mozilla documentation:https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+*/
 /* Mobile menu adjustments */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack logo and links */
+        flex-direction: column; /*Stacks elements*/
         align-items: flex-start;
     }
 
@@ -60,19 +63,23 @@ p {
     height: auto;
 }
 
+
+/*Grid for intro section on pages. Uses a grid where elements span over colums*/
 .grid-container-intro {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin: auto;
 
 }
+
 .grid-intro-item{
     grid-column: 4/6;
     background-color: #f8f4eb;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: left;
     padding: 2rem;
 }
+
 .grid-intro-image{
     grid-column: 1/4;
     max-width: 100%;
@@ -89,10 +96,10 @@ p {
 
     /* Make the special item span the full row */
     .grid-intro-item{
+        font-size: .75em;
         grid-column: 1 / -1; /* This will make the item take up the entire row */
     }
 }
-
 @media (max-width: 480px) {
     .grid-container-intro {
         grid-template-columns: 1fr; /* Change to 1 column on mobile screens */
@@ -102,9 +109,10 @@ p {
 }
 
 
-
-/* Koden for expand basert og inspirert av https://www.geeksforgeeks.org/html-label-tag/ og https://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lists_collapsible */
-
+/* The expand code is expanded and inspired from the article "html-label-tag": https://www.geeksforgeeks.org/html-label-tag/ 
+   and from w3school: https://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lists_collapsible 
+   The code below uses a checkbox for expanding content, where on click (checkesd) the content expands
+*/
 .expand-toggle {
     display: none; /* checkboks */
 }
@@ -135,7 +143,7 @@ p {
 }
 
 .expand-toggle:checked + .expand-label + .expand-content {
-    display: block; /* Vis innholdet når checkbox er valgt */
+    display: block; /* Shows content when clickes*/
 }
 
 .expand-content ul {
@@ -145,37 +153,37 @@ p {
 .grid {
     margin-top: 5%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Fire kolonner */
-    gap: 2rem; /* Mellomrom mellom elementer */
-    padding: 1.5rem; /* Innvendig marg */
-    background-color: #f8f4eb; /* Lys bakgrunnsfarge */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f4eb; 
 }
 
 .grid-text {
     font-size: 1.25em;
-    text-align: left; /* Juster tekst til venstre */
+    text-align: left;
 }
 
 .grid-text p {
-    margin: 2%; /* Mellomrom mellom linjer */
+    margin: 2%;
     font-family: Arial, sans-serif;
-    color: #333; /* Mørk grå tekst */
+    color: #333;
 }
 
 .grid-text strong {
-    font-size: 1.5em; /* Større skrift for fremhevet tekst */
-    color: #000; /* Svart for kontrast */
+    font-size: 1.5em;
+    color: #000;
 }
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: 1fr; /* Stack in a single column on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -187,14 +195,14 @@ p {
     font-size: 1.25em;
 }
 
-/*Fikser bilde for main content på activity page*/
+/*A grid for images*/
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* To kolonner */
-    gap: 20px; /* Mellomrom */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
     padding: 20px;
-    background-color: #f8f4eb; /* Lys bakgrunn */
-    border-radius: 10px; /* Runder hjørner */
+    background-color: #f8f4eb; 
+    border-radius: 10px;
 }
 .image-grid-item{
     width: 100%;
@@ -202,7 +210,7 @@ p {
 }
 .grid-container-health {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Three columns */
+    grid-template-columns: repeat(5, 1fr);
     margin: auto;
 
 }
