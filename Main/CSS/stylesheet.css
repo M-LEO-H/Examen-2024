@@ -9,20 +9,13 @@ p {
     size: 2em;
 }
 
-footer{
-    display: block;
-    margin-top: 5%;
-    background-color: #f8f4eb;
-    max-width: 100%;
-    width: 100%;
-}
-
 /* Navbar container */
 .navbar {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Space between logo and links */
-    align-items: center;
     background-color: #f8f4eb; /* Padding for top/bottom and sides */
     margin-bottom: 5%;
 }
@@ -73,7 +66,7 @@ footer{
 
 .grid-container-intro {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Three columns */
+    grid-template-columns: repeat(5, 1fr);
     margin: auto;
 
 }
@@ -150,8 +143,6 @@ footer{
     list-style-type: disc;
 }
 
-
-
 .grid {
     margin-top: 5%;
     display: grid;
@@ -194,6 +185,7 @@ footer{
     padding: 2rem;
     margin-top: 5%;
 }
+
 /*Fikser bilde for main content på activity page*/
 .image-grid {
     display: grid;
